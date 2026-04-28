@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Lash Artist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .page-header {
+        padding: 150px 0 80px;
+        background: var(--clr-dark-grey);
+        color: var(--clr-white);
+        text-align: center;
+      }
+      .page-header h1 {
+        color: var(--clr-white);
+      }
+      .services-list {
+        padding: 6rem 0;
+      }
+      .service-detail-card {
+        display: flex;
+        gap: 4rem;
+        margin-bottom: 5rem;
+        align-items: stretch;
+      }
+      .service-detail-card:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .service-img-col {
+        flex: 1;
+        background: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+        min-height: 400px;
+      }
+      .service-img-col img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .service-info-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .service-title {
+        margin-bottom: 1rem;
+      }
+      .service-meta {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        color: var(--clr-gold);
+        font-family: var(--font-header);
+        font-size: 1.2rem;
+      }
+      .service-desc {
+        margin-bottom: 2rem;
+      }
+      .service-lists {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      .service-lists div {
+        flex: 1;
+      }
+      .service-lists h4 {
+        margin-bottom: 1rem;
+        font-family: var(--font-body);
+        font-weight: 600;
+      }
+      .service-lists ul li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+      .service-lists ul li::before {
+        content: '\f00c';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: var(--clr-gold);
+      }
+      @media (max-width: 900px) {
+        .service-detail-card, .service-detail-card:nth-child(even) {
+          flex-direction: column;
+          gap: 2rem;
+        }
+        .service-lists {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+
+      /* Include Header/Footer imports if this was a component system, but since it's vanilla, we copy the header/footer HTML. */
+    </style>
+    <script type="module" crossorigin src="/lash-industry/assets/main-DL39FSK4.js"></script>
+    <link rel="stylesheet" crossorigin href="/lash-industry/assets/main-DJGZeD7J.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Lash Artist</a>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link active">Services</a>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="booking.html" class="nav-link">Booking</a>
+        </nav>
+        <div class="header-actions">
+          <a href="booking.html" class="btn btn-primary">Book Now</a>
+        </div>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <div class="page-header fade-in">
+      <div class="container">
+        <h1>Our Services</h1>
+        <p>Discover our full range of luxury lash and brow services</p>
+      </div>
+    </div>
+
+    <section class="services-list container fade-in">
+      <!-- Service 1 -->
+      <div class="service-detail-card">
+        <div class="service-img-col">
+          <img src="service_lash_lift_1777389609491.png" alt="Full Set Lash Extensions">
+        </div>
+        <div class="service-info-col">
+          <h2 class="service-title">Full Set Lash Extensions</h2>
+          <div class="service-meta">
+            <span>$120 - $180</span>
+            <span><i class="far fa-clock"></i> 90-120 min</span>
+          </div>
+          <p class="service-desc">A customized set of eyelash extensions applied carefully to isolate each natural lash. We offer Classic, Hybrid, and Volume sets depending on your desired look.</p>
+          <div class="service-lists">
+            <div>
+              <h4>What to expect</h4>
+              <ul>
+                <li>Consultation & mapping</li>
+                <li>Relaxing, painless process</li>
+                <li>Customized curl & length</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Aftercare tips</h4>
+              <ul>
+                <li>Keep dry for 24 hours</li>
+                <li>Wash daily with lash cleanser</li>
+                <li>Avoid oil-based products</li>
+              </ul>
+            </div>
+          </div>
+          <a href="booking.html" class="btn btn-outline" style="align-self: flex-start;">Book This Service</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-detail-card">
+        <div class="service-img-col" style="background:#333;">
+          <!-- Placeholder -->
+        </div>
+        <div class="service-info-col">
+          <h2 class="service-title">Lash Refills</h2>
+          <div class="service-meta">
+            <span>$50 - $100</span>
+            <span><i class="far fa-clock"></i> 45-60 min</span>
+          </div>
+          <p class="service-desc">Maintain your full, gorgeous look by replacing outgrown extensions and filling in gaps where natural lashes have shed.</p>
+          <div class="service-lists">
+            <div>
+              <h4>What to expect</h4>
+              <ul>
+                <li>Removal of outgrown lashes</li>
+                <li>Deep cleansing</li>
+                <li>Application of new extensions</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Aftercare tips</h4>
+              <ul>
+                <li>Book every 2-3 weeks</li>
+                <li>Continue daily washing</li>
+              </ul>
+            </div>
+          </div>
+          <a href="booking.html" class="btn btn-outline" style="align-self: flex-start;">Book This Service</a>
+        </div>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="service-detail-card">
+        <div class="service-img-col">
+          <img src="service_lash_lift_1777389609491.png" alt="Lash Lift">
+        </div>
+        <div class="service-info-col">
+          <h2 class="service-title">Lash Lift & Tint</h2>
+          <div class="service-meta">
+            <span>$60 - $80</span>
+            <span><i class="far fa-clock"></i> 60 min</span>
+          </div>
+          <p class="service-desc">A perm for your natural eyelashes. It uplifts and curls them from the base of the lash, making them stand out and look longer.</p>
+          <div class="service-lists">
+            <div>
+              <h4>What to expect</h4>
+              <ul>
+                <li>Lasts 6-8 weeks</li>
+                <li>Darker, curled lashes</li>
+                <li>Low maintenance</li>
+              </ul>
+            </div>
+          </div>
+          <a href="booking.html" class="btn btn-outline" style="align-self: flex-start;">Book This Service</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo" style="color: white; margin-bottom: 1rem;">Lash Artist</div>
+            <p>Luxury lash extensions, lash lifts, and microblading tailored to your unique beauty.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="services.html">Services</a>
+              <a href="portfolio.html">Portfolio</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="booking.html">Booking</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Lash Artist. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

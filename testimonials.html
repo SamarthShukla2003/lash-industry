@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials | Lash Artist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .page-header {
+        padding: 150px 0 80px;
+        background: var(--clr-dark-grey);
+        color: var(--clr-white);
+        text-align: center;
+      }
+      .page-header h1 {
+        color: var(--clr-white);
+      }
+      
+      .reviews-section {
+        padding: 6rem 0;
+      }
+      .review-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      .review-card {
+        background: var(--clr-white);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border: 1px solid rgba(212,175,55,0.1);
+      }
+      .review-stars {
+        color: var(--clr-gold);
+        margin-bottom: 1rem;
+      }
+      .review-quote {
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+      .review-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .author-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--clr-light-grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--clr-gold);
+        border: 2px solid var(--clr-gold);
+      }
+    </style>
+    <script type="module" crossorigin src="/lash-industry/assets/main-DL39FSK4.js"></script>
+    <link rel="stylesheet" crossorigin href="/lash-industry/assets/main-DJGZeD7J.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Lash Artist</a>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="/testimonials.html" class="nav-link active">Testimonials</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="booking.html" class="nav-link">Booking</a>
+        </nav>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <div class="page-header fade-in">
+      <div class="container">
+        <h1>What Our Clients Say</h1>
+        <p>Join 500+ happy customers</p>
+      </div>
+    </div>
+
+    <section class="reviews-section container fade-in">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2 style="font-size: 4rem; color: var(--clr-gold); margin:0;">5.0</h2>
+        <div class="review-stars" style="font-size: 1.5rem;">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p>Based on 150+ Google Reviews</p>
+      </div>
+      
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">"Absolutely the best lash experience I've ever had! My volume lashes lasted over 3 weeks and looked flawless the entire time."</p>
+          <div class="review-author">
+            <div class="author-img">S</div>
+            <div>
+              <strong>Sarah M.</strong>
+              <div style="font-size: 0.85rem; color: #666;">Volume Full Set</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">"I was nervous about getting extensions for the first time, but she made me feel so comfortable. They look incredibly natural!"</p>
+          <div class="review-author">
+            <div class="author-img">E</div>
+            <div>
+              <strong>Emily R.</strong>
+              <div style="font-size: 0.85rem; color: #666;">Classic Full Set</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">"My microblading healed perfectly. The shape is exactly what I wanted. Worth every penny!"</p>
+          <div class="review-author">
+            <div class="author-img">M</div>
+            <div>
+              <strong>Michelle K.</strong>
+              <div style="font-size: 0.85rem; color: #666;">Microblading</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center" style="margin-top: 4rem;">
+        <a href="#" class="btn btn-outline">Read More on Google</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo" style="color: white; margin-bottom: 1rem;">Lash Artist</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

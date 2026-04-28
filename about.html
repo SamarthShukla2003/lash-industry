@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Lash Artist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .page-header {
+        padding: 150px 0 80px;
+        background: var(--clr-dark-grey);
+        color: var(--clr-white);
+        text-align: center;
+      }
+      .page-header h1 {
+        color: var(--clr-white);
+      }
+      
+      .about-section {
+        padding: 6rem 0;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .about-img {
+        position: relative;
+      }
+      .about-img img {
+        border-radius: 50%;
+        border: 10px solid var(--clr-gold);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+      .about-text h2 {
+        margin-bottom: 1.5rem;
+      }
+      .about-text p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+      
+      .certs-section {
+        background: var(--clr-light-grey);
+        padding: 6rem 0;
+        text-align: center;
+      }
+      .certs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .cert-card {
+        background: var(--clr-white);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      }
+      .cert-card i {
+        font-size: 2.5rem;
+        color: var(--clr-gold);
+        margin-bottom: 1rem;
+      }
+      @media (max-width: 768px) {
+        .about-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+    <script type="module" crossorigin src="/lash-industry/assets/main-DL39FSK4.js"></script>
+    <link rel="stylesheet" crossorigin href="/lash-industry/assets/main-DJGZeD7J.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Lash Artist</a>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link active">About</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="booking.html" class="nav-link">Booking</a>
+        </nav>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <div class="page-header fade-in">
+      <div class="container">
+        <h1>About Me</h1>
+        <p>The artist behind the lashes</p>
+      </div>
+    </div>
+
+    <section class="about-section container fade-in">
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="about_artist_portrait_1777389624652.png" alt="Lash Artist Portrait">
+        </div>
+        <div class="about-text">
+          <h2>Hi! I'm Jane</h2>
+          <p>I have always believed that when you feel beautiful on the outside, it ignites a confidence that radiates from within. With over 5 years of experience in the beauty industry, I've dedicated my career to mastering the delicate art of eyelash extensions and microblading.</p>
+          <p>My approach is deeply personalized. I don't believe in a "one size fits all" style. Every set of lashes is meticulously designed to complement your unique eye shape, natural lashes, and lifestyle.</p>
+          <p>When I'm not in the studio creating lash magic, you can find me exploring new coffee shops, traveling, or staying up-to-date with the latest beauty trends.</p>
+          <div style="margin-top: 2rem;">
+            <a href="booking.html" class="btn btn-primary">Book With Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="certs-section fade-in">
+      <div class="container">
+        <h2>Certifications & Credentials</h2>
+        <div class="certs-grid">
+          <div class="cert-card">
+            <i class="fas fa-certificate"></i>
+            <h3>Licensed Esthetician</h3>
+            <p>State Board Certified</p>
+          </div>
+          <div class="cert-card">
+            <i class="fas fa-award"></i>
+            <h3>Master Volume</h3>
+            <p>Certified Lash Artist</p>
+          </div>
+          <div class="cert-card">
+            <i class="fas fa-star"></i>
+            <h3>Microblading</h3>
+            <p>PhiBrows Certified</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo" style="color: white; margin-bottom: 1rem;">Lash Artist</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

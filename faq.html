@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | Lash Artist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .page-header {
+        padding: 150px 0 80px;
+        background: var(--clr-dark-grey);
+        color: var(--clr-white);
+        text-align: center;
+      }
+      .page-header h1 {
+        color: var(--clr-white);
+      }
+      
+      .faq-section {
+        padding: 6rem 0;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .faq-category {
+        margin-bottom: 3rem;
+      }
+      .faq-category h3 {
+        margin-bottom: 1.5rem;
+        color: var(--clr-gold);
+        border-bottom: 1px solid rgba(212,175,55,0.3);
+        padding-bottom: 0.5rem;
+      }
+      
+      .accordion-item {
+        background: var(--clr-white);
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+      .accordion-header {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 600;
+        transition: var(--transition-fast);
+      }
+      .accordion-header:hover {
+        background: var(--clr-light-grey);
+      }
+      .accordion-header.active {
+        border-left: 4px solid var(--clr-gold);
+      }
+      .accordion-icon {
+        color: var(--clr-gold);
+        transition: transform 0.3s ease;
+      }
+      .accordion-header.active .accordion-icon {
+        transform: rotate(180deg);
+      }
+      .accordion-body {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease;
+        color: #666;
+      }
+      .accordion-body.active {
+        padding: 1.5rem;
+        max-height: 500px; /* arbitrary max-height for animation */
+      }
+    </style>
+    <script type="module" crossorigin src="/lash-industry/assets/main-DL39FSK4.js"></script>
+    <link rel="stylesheet" crossorigin href="/lash-industry/assets/main-DJGZeD7J.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Lash Artist</a>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="booking.html" class="nav-link">Booking</a>
+        </nav>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <div class="page-header fade-in">
+      <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about our services</p>
+      </div>
+    </div>
+
+    <section class="faq-section container fade-in">
+      
+      <div class="faq-category">
+        <h3>General</h3>
+        
+        <div class="accordion-item">
+          <div class="accordion-header">
+            How long do lash extensions last?
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            With proper care and maintenance, a full set of eyelash extensions can last anywhere from 4 to 6 weeks. However, because your natural lashes have a growth cycle, they will shed naturally, taking the extension with them. We recommend booking a refill every 2-3 weeks to keep your lashes looking full and beautiful.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Are lash extensions safe?
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            Yes, when applied by a licensed and trained professional using quality products, lash extensions are completely safe and do not damage your natural lashes.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h3>Aftercare</h3>
+        
+        <div class="accordion-item">
+          <div class="accordion-header">
+            How do I care for my lashes?
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Avoid getting them wet for the first 24 hours.</li>
+              <li>Wash them daily with a lash-safe foaming cleanser.</li>
+              <li>Avoid oil-based makeup and skincare products around the eyes.</li>
+              <li>Brush them gently daily with a clean spoolie.</li>
+              <li>Do not pick or pull at your extensions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            Can I wear eye makeup with extensions?
+            <i class="fas fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-body">
+            Yes, you can wear oil-free makeup, such as oil-free eyeliner and eyeshadow. However, mascara is NOT recommended on volume sets as it collapses the fans. If you must wear mascara on classic lashes, only use a water-based formula designed specifically for extensions.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo" style="color: white; margin-bottom: 1rem;">Lash Artist</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const headers = document.querySelectorAll('.accordion-header');
+        headers.forEach(header => {
+          header.addEventListener('click', () => {
+            const body = header.nextElementSibling;
+            
+            // Close others
+            document.querySelectorAll('.accordion-body').forEach(b => {
+              if (b !== body) {
+                b.classList.remove('active');
+                b.previousElementSibling.classList.remove('active');
+              }
+            });
+
+            header.classList.toggle('active');
+            body.classList.toggle('active');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

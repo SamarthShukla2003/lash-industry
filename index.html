@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lash Artist | Luxury Extensions & Microblading</title>
+    <meta name="description" content="Luxury lash extensions and microblading. Transform your look with custom-designed lashes using premium products." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .hero {
+        min-height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('hero_lash_photo_1777389593141.png') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--clr-white);
+        padding-top: 80px;
+        position: relative;
+        background-attachment: fixed;
+      }
+      .hero h1 {
+        color: var(--clr-white);
+        margin-bottom: 1rem;
+      }
+      .hero-sub {
+        color: var(--clr-gold);
+        font-family: var(--font-header);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-style: italic;
+      }
+      .hero-desc {
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        font-size: 1.1rem;
+        font-weight: 300;
+      }
+      
+      .trust-badges {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color: var(--clr-light-grey);
+        padding: 4rem 2rem;
+        background-image: radial-gradient(var(--clr-gold) 1px, transparent 1px);
+        background-size: 20px 20px;
+        background-color: #fafafa;
+      }
+      .badge {
+        text-align: center;
+      }
+      .badge i {
+        font-size: 2.5rem;
+        color: var(--clr-gold);
+        margin-bottom: 1rem;
+      }
+      .badge h3 {
+        margin-bottom: 0.5rem;
+      }
+      
+      .services-preview {
+        padding: 6rem 0;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      .section-header h2 {
+        position: relative;
+        display: inline-block;
+      }
+      .section-header h2::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background: var(--clr-gold);
+        bottom: -15px;
+        left: 25%;
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      .service-card {
+        background: var(--clr-white);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        padding: 2.5rem 2rem;
+        text-align: center;
+        border-radius: 8px;
+        transition: var(--transition-smooth);
+        position: relative;
+        overflow: hidden;
+      }
+      .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 4px;
+        background: var(--clr-gold);
+        transform: scaleX(0);
+        transition: var(--transition-smooth);
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+      }
+      .service-card:hover::before {
+        transform: scaleX(1);
+      }
+      .service-card i {
+        font-size: 3rem;
+        color: var(--clr-rose-gold);
+        margin-bottom: 1.5rem;
+      }
+      .service-card h3 {
+        margin-bottom: 1rem;
+      }
+      .service-card p {
+        margin-bottom: 1.5rem;
+        color: #666;
+      }
+      .service-price {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--clr-gold);
+        margin-bottom: 1.5rem;
+      }
+
+      .portfolio-preview {
+        background: var(--clr-dark-grey);
+        color: var(--clr-white);
+        padding: 6rem 0;
+      }
+      .portfolio-preview .section-header h2 {
+        color: var(--clr-white);
+      }
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        aspect-ratio: 4/5;
+        background: #333;
+      }
+      .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition-smooth);
+      }
+      .portfolio-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: var(--transition-smooth);
+      }
+      .portfolio-item:hover img {
+        transform: scale(1.1);
+      }
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+      }
+      @media (max-width: 900px) {
+        .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 600px) {
+        .portfolio-grid { grid-template-columns: 1fr; }
+      }
+
+      .cta-section {
+        background: linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-gold-dark) 100%);
+        padding: 6rem 0;
+        text-align: center;
+        color: var(--clr-white);
+      }
+      .cta-section h2 {
+        color: var(--clr-white);
+        margin-bottom: 1.5rem;
+      }
+      .cta-section .btn {
+        background: var(--clr-white);
+        color: var(--clr-gold);
+        margin-top: 2rem;
+      }
+      .cta-section .btn:hover {
+        background: var(--clr-black);
+        color: var(--clr-white);
+      }
+
+      .features-section {
+        padding: 6rem 0;
+        background: var(--clr-blush);
+      }
+      .feature-row {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+      .feature-row:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .feature-text {
+        flex: 1;
+      }
+      .feature-image {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+      @media (max-width: 768px) {
+        .feature-row, .feature-row:nth-child(even) {
+          flex-direction: column;
+          gap: 2rem;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/lash-industry/assets/main-DL39FSK4.js"></script>
+    <link rel="stylesheet" crossorigin href="/lash-industry/assets/main-DJGZeD7J.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Lash Artist</a>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="booking.html" class="nav-link">Booking</a>
+        </nav>
+        <div class="header-actions">
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          </div>
+          <a href="booking.html" class="btn btn-primary">Book Now</a>
+        </div>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+      <div class="container">
+        <h1>Transform Your Look</h1>
+        <div class="hero-sub">Luxury Lash Extensions & Microblading</div>
+        <p class="hero-desc">Specialized in luxury lash extensions using premium products. Enhance your natural beauty with custom-designed lashes tailored perfectly to your eye shape.</p>
+        <a href="booking.html" class="btn btn-primary">Book Your Appointment</a>
+      </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-badges fade-in">
+      <div class="badge">
+        <i class="fas fa-heart"></i>
+        <h3><span class="counter-number" data-target="500">0</span>+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="badge">
+        <i class="fas fa-certificate"></i>
+        <h3>Licensed</h3>
+        <p>Esthetician</p>
+      </div>
+      <div class="badge">
+        <i class="fas fa-gem"></i>
+        <h3>Premium</h3>
+        <p>Products</p>
+      </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview container fade-in">
+      <div class="section-header">
+        <h2>Our Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-eye"></i>
+          <h3>Classic Lashes</h3>
+          <p>A beautiful, natural enhancement. One extension applied to one natural lash.</p>
+          <div class="service-price">From $120</div>
+          <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-magic"></i>
+          <h3>Volume Lashes</h3>
+          <p>Full, dramatic and fluffy. Multiple lightweight extensions applied to one natural lash.</p>
+          <div class="service-price">From $180</div>
+          <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-spa"></i>
+          <h3>Lash Lift & Tint</h3>
+          <p>Enhance your natural lashes with a semi-permanent curl and tint.</p>
+          <div class="service-price">From $80</div>
+          <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Microblading</h3>
+          <p>Semi-permanent brow tattooing for full, perfectly shaped eyebrows.</p>
+          <div class="service-price">From $350</div>
+          <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features / Why Choose Us -->
+    <section class="features-section fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Us</h2>
+        </div>
+        <div class="feature-row">
+          <div class="feature-text">
+            <h3><i class="fas fa-gem text-gold" style="margin-right: 10px;"></i>Premium Quality Products</h3>
+            <p>We use only the highest quality medical-grade adhesives and ultra-soft, lightweight extensions that look and feel completely natural. Your eye health is our top priority.</p>
+          </div>
+          <div class="feature-image">
+            <img src="service_lash_lift_1777389609491.png" alt="Lash Service" />
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-text">
+            <h3><i class="fas fa-crown text-gold" style="margin-right: 10px;"></i>Customized Designs</h3>
+            <p>No two pairs of eyes are the same. We map out a completely custom design based on your eye shape, natural lashes, and lifestyle to ensure the perfect, flattering look.</p>
+          </div>
+          <div class="feature-image" style="background:#333; display:flex; align-items:center; justify-content:center; color:#fff; aspect-ratio:4/3;">
+             <span>Custom Lash Mapping</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="portfolio-preview fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>See Our Work</h2>
+        </div>
+        <div class="portfolio-grid">
+          <!-- Placeholders for portfolio -->
+          <div class="portfolio-item">
+            <div style="width:100%; height:100%; background:#222;"></div>
+            <div class="portfolio-overlay">
+              <a href="portfolio.html" class="btn btn-outline" style="color:white; border-color:white;">View Full</a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div style="width:100%; height:100%; background:#2a2a2a;"></div>
+            <div class="portfolio-overlay">
+              <a href="portfolio.html" class="btn btn-outline" style="color:white; border-color:white;">View Full</a>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div style="width:100%; height:100%; background:#333;"></div>
+            <div class="portfolio-overlay">
+              <a href="portfolio.html" class="btn btn-outline" style="color:white; border-color:white;">View Full</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="portfolio.html" class="btn btn-outline" style="color:var(--clr-white); border-color:var(--clr-white);">View Full Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section fade-in">
+      <div class="container">
+        <h2>Ready to Transform Your Lashes?</h2>
+        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Book your appointment today and wake up flawless every morning. Secure your spot using our easy online booking system.</p>
+        <a href="booking.html" class="btn">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo" style="color: white; margin-bottom: 1rem;">Lash Artist</div>
+            <p>Luxury lash extensions, lash lifts, and microblading tailored to your unique beauty.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="services.html">Services</a>
+              <a href="portfolio.html">Portfolio</a>
+              <a href="pricing.html">Pricing & Packages</a>
+              <a href="faq.html">FAQ</a>
+              <a href="policies.html">Policies</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <div class="footer-links">
+              <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> hello@lashartist.com</p>
+              <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Suite 100</p>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Follow on Social</h4>
+            <div class="social-icons" style="margin-bottom: 1.5rem;">
+              <a href="#" class="social-icon" style="color: white;"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon" style="color: white;"><i class="fab fa-tiktok"></i></a>
+              <a href="#" class="social-icon" style="color: white;"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <h4>Newsletter</h4>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Lash Artist. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
