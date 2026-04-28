@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing & Packages | Lash Artist</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .page-header {
+        padding: 150px 0 80px;
+        background: var(--clr-dark-grey);
+        color: var(--clr-white);
+        text-align: center;
+      }
+      .page-header h1 {
+        color: var(--clr-white);
+      }
+      
+      .pricing-section {
+        padding: 6rem 0;
+      }
+      
+      .pricing-table-container {
+        max-width: 900px;
+        margin: 0 auto 5rem;
+        background: var(--clr-white);
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        overflow: hidden;
+      }
+      .pricing-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .pricing-table th, .pricing-table td {
+        padding: 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+      }
+      .pricing-table th {
+        background: var(--clr-light-grey);
+        font-family: var(--font-header);
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+      .pricing-table tr:hover {
+        background: #fafafa;
+      }
+      .pricing-table .price {
+        color: var(--clr-gold);
+        font-weight: 600;
+      }
+
+      .memberships-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .membership-card {
+        background: var(--clr-white);
+        border: 1px solid rgba(212,175,55,0.2);
+        border-radius: 8px;
+        padding: 3rem 2rem;
+        text-align: center;
+        transition: var(--transition-smooth);
+        position: relative;
+      }
+      .membership-card.recommended {
+        border: 2px solid var(--clr-gold);
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(212,175,55,0.1);
+      }
+      .membership-card.recommended::before {
+        content: 'Most Popular';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--clr-gold);
+        color: var(--clr-white);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .membership-card h3 {
+        margin-bottom: 1rem;
+      }
+      .membership-price {
+        font-size: 2.5rem;
+        font-family: var(--font-header);
+        color: var(--clr-gold);
+        margin-bottom: 2rem;
+      }
+      .membership-price span {
+        font-size: 1rem;
+        color: #666;
+        font-family: var(--font-body);
+      }
+      .membership-features {
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+      .membership-features li {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .membership-features li::before {
+        content: '\f00c';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: var(--clr-gold);
+      }
+
+      .promo-banner {
+        background: var(--clr-blush);
+        padding: 3rem;
+        border-radius: 8px;
+        text-align: center;
+        margin: 4rem auto;
+        max-width: 800px;
+      }
+      @media (max-width: 768px) {
+        .pricing-table th, .pricing-table td {
+          padding: 1rem;
+        }
+        .membership-card.recommended {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="/" class="logo">Lash Artist</a>
+        <nav class="nav-menu">
+          <a href="/index.html" class="nav-link">Home</a>
+          <a href="/services.html" class="nav-link">Services</a>
+          <a href="/portfolio.html" class="nav-link">Portfolio</a>
+          <a href="/about.html" class="nav-link">About</a>
+          <a href="/pricing.html" class="nav-link active">Pricing</a>
+          <a href="/booking.html" class="nav-link">Booking</a>
+        </nav>
+        <div class="header-actions">
+          <a href="/booking.html" class="btn btn-primary">Book Now</a>
+        </div>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <div class="page-header fade-in">
+      <div class="container">
+        <h1>Pricing & Packages</h1>
+        <p>Transparent pricing for luxury services</p>
+      </div>
+    </div>
+
+    <section class="pricing-section container fade-in">
+      
+      <div class="promo-banner">
+        <h2>First-Time Client?</h2>
+        <p style="font-size: 1.2rem; margin: 1rem 0 2rem;">Get 15% off your first full set of eyelash extensions.</p>
+        <a href="/booking.html" class="btn btn-primary">Claim Offer</a>
+      </div>
+
+      <div class="section-header text-center" style="margin-bottom: 3rem;">
+        <h2>A La Carte Services</h2>
+      </div>
+
+      <div class="pricing-table-container">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Duration</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Classic Full Set</strong><br><span style="font-size:0.9rem; color:#666;">Natural enhancement</span></td>
+              <td>120 min</td>
+              <td class="price">$120</td>
+              <td><a href="/booking.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book</a></td>
+            </tr>
+            <tr>
+              <td><strong>Volume Full Set</strong><br><span style="font-size:0.9rem; color:#666;">Dramatic & fluffy</span></td>
+              <td>150 min</td>
+              <td class="price">$180</td>
+              <td><a href="/booking.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book</a></td>
+            </tr>
+            <tr>
+              <td><strong>2-Week Refill</strong><br><span style="font-size:0.9rem; color:#666;">Must have 50% lashes remaining</span></td>
+              <td>60 min</td>
+              <td class="price">$65</td>
+              <td><a href="/booking.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book</a></td>
+            </tr>
+            <tr>
+              <td><strong>Lash Lift & Tint</strong><br><span style="font-size:0.9rem; color:#666;">Perm for natural lashes</span></td>
+              <td>60 min</td>
+              <td class="price">$80</td>
+              <td><a href="/booking.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-header text-center" style="margin-top: 6rem; margin-bottom: 3rem;">
+        <h2>Membership Options</h2>
+        <p>Save money and keep your lashes looking flawless year-round.</p>
+      </div>
+
+      <div class="memberships-grid">
+        <div class="membership-card">
+          <h3>Silver Lash</h3>
+          <div class="membership-price">$110<span>/month</span></div>
+          <ul class="membership-features">
+            <li>Two 2-week Classic Refills</li>
+            <li>10% off retail products</li>
+            <li>Priority booking</li>
+          </ul>
+          <a href="/booking.html" class="btn btn-outline" style="width: 100%;">Subscribe</a>
+        </div>
+        
+        <div class="membership-card recommended">
+          <h3>Gold Lash</h3>
+          <div class="membership-price">$130<span>/month</span></div>
+          <ul class="membership-features">
+            <li>Two 2-week Volume Refills</li>
+            <li>15% off retail products</li>
+            <li>Priority booking</li>
+            <li>1 Free Lash Bath / month</li>
+          </ul>
+          <a href="/booking.html" class="btn btn-primary" style="width: 100%;">Subscribe</a>
+        </div>
+
+        <div class="membership-card">
+          <h3>Lash Lift Club</h3>
+          <div class="membership-price">$65<span>/month</span></div>
+          <ul class="membership-features">
+            <li>One Lash Lift & Tint</li>
+            <li>10% off retail products</li>
+            <li>Complimentary brow wax</li>
+          </ul>
+          <a href="/booking.html" class="btn btn-outline" style="width: 100%;">Subscribe</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo" style="color: white; margin-bottom: 1rem;">Lash Artist</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

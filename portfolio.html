@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Lash Artist</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .page-header {
+        padding: 150px 0 80px;
+        background: var(--clr-dark-grey);
+        color: var(--clr-white);
+        text-align: center;
+      }
+      .page-header h1 {
+        color: var(--clr-white);
+      }
+      
+      .portfolio-section {
+        padding: 4rem 0;
+      }
+      .filter-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+      .filter-btn {
+        background: none;
+        border: 1px solid var(--clr-gold);
+        color: var(--clr-grey);
+        padding: 0.5rem 1.5rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: var(--transition-fast);
+        font-family: var(--font-body);
+      }
+      .filter-btn.active, .filter-btn:hover {
+        background: var(--clr-gold);
+        color: var(--clr-white);
+      }
+      
+      .masonry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .masonry-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        aspect-ratio: 1; /* For simplicity here */
+        background: #f0f0f0;
+      }
+      .masonry-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition-smooth);
+      }
+      .masonry-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: var(--transition-smooth);
+        color: var(--clr-white);
+      }
+      .masonry-item:hover img {
+        transform: scale(1.1);
+      }
+      .masonry-item:hover .masonry-overlay {
+        opacity: 1;
+      }
+      
+      /* Lightbox */
+      .lightbox {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.9);
+        z-index: 2000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+      .lightbox.active {
+        display: flex;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90vh;
+        object-fit: contain;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 2rem; right: 2rem;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="nav-container">
+        <a href="/" class="logo">Lash Artist</a>
+        <nav class="nav-menu">
+          <a href="/index.html" class="nav-link">Home</a>
+          <a href="/services.html" class="nav-link">Services</a>
+          <a href="/portfolio.html" class="nav-link active">Portfolio</a>
+          <a href="/about.html" class="nav-link">About</a>
+          <a href="/pricing.html" class="nav-link">Pricing</a>
+          <a href="/booking.html" class="nav-link">Booking</a>
+        </nav>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <div class="page-header fade-in">
+      <div class="container">
+        <h1>Our Portfolio</h1>
+        <p>Explore our latest transformations</p>
+      </div>
+    </div>
+
+    <section class="portfolio-section container fade-in">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="extensions">Lash Extensions</button>
+        <button class="filter-btn" data-filter="lift">Lash Lift</button>
+        <button class="filter-btn" data-filter="microblading">Microblading</button>
+      </div>
+
+      <div class="masonry-grid">
+        <div class="masonry-item" data-category="extensions">
+          <img src="/service_lash_lift_1777389609491.png" alt="Lash Extensions">
+          <div class="masonry-overlay">
+            <h3>Volume Lashes</h3>
+            <p>Artist: Jane Doe</p>
+          </div>
+        </div>
+        <div class="masonry-item" data-category="extensions">
+          <img src="/hero_lash_photo_1777389593141.png" alt="Lash Extensions">
+          <div class="masonry-overlay">
+            <h3>Classic Full Set</h3>
+            <p>Artist: Jane Doe</p>
+          </div>
+        </div>
+        <div class="masonry-item" data-category="lift">
+          <img src="/service_lash_lift_1777389609491.png" alt="Lash Lift">
+          <div class="masonry-overlay">
+            <h3>Lash Lift & Tint</h3>
+            <p>Artist: Jane Doe</p>
+          </div>
+        </div>
+        <!-- More items would go here -->
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <i class="fas fa-times lightbox-close" id="lightbox-close"></i>
+      <img src="" id="lightbox-img" alt="Enlarged view">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo" style="color: white; margin-bottom: 1rem;">Lash Artist</div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Lash Artist. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+      // Simple Lightbox Logic
+      document.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('.masonry-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        items.forEach(item => {
+          item.addEventListener('click', () => {
+            const imgSrc = item.querySelector('img').src;
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+          });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+          lightbox.classList.remove('active');
+        });
+
+        // Simple filtering
+        const btns = document.querySelectorAll('.filter-btn');
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-filter');
+            
+            items.forEach(item => {
+              if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
